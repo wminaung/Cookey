@@ -17,8 +17,8 @@ const myCookie = new Cookey(key, value, date, hour, path);
 const myCookie = new Cookey();
 
 const cookieString = Cookey.createCookie(key, value, date, hour, path); // create cookie String
-
-myCookie.setCookie(cookieString);
+ 
+myCookie.setCookie = cookieString;
 ```
 
 ## Get All Cookie
