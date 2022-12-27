@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cookey = void 0;
 class Cookey {
     constructor(key, value, date, hour, path) {
         this.key = "";
@@ -82,3 +84,4 @@ class Cookey {
         return cookieString;
     }
 }
+exports.Cookey = Cookey;
