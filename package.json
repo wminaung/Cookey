@@ -1,0 +1,19 @@
+{
+  "name": "cookey",
+  "version": "1.0.0",
+  "description": "```javascript\r //\r const key = \"username\";\r const value = \"john doe\";\r const date = new Date();\r const hour = 3;\r const path = \"/\";",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wminaung/Cookey.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wminaung/Cookey/issues"
+  },
+  "homepage": "https://github.com/wminaung/Cookey#readme"
+}
