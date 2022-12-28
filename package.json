@@ -1,6 +1,7 @@
 {
   "name": "cookey",
-  "version": "1.0.0",
+  "version": "1.0.3",
+  "type": "module",
   "description": "cookie manapulation class",
   "main": "index.js",
   "scripts": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/wminaung/Cookey/issues"
   },
-  "homepage": "https://github.com/wminaung/Cookey#readme"
+  "homepage": "https://github.com/wminaung/Cookey#readme",
+  "dependencies": {
+    "cookey": "^1.0.3"
+  }
 }

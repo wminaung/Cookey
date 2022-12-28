@@ -1,3 +1,3 @@
-const { Cookey } = require("./dist/Cookey.js");
+import Cookey from '"./dist/Cookey.js"';
 
-module.exports = { Cookey };
+export default Cookey;

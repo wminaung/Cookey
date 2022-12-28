@@ -3,7 +3,7 @@ type CookieObj = {
   value: string;
 };
 
-export class Cookey {
+class Cookey {
   private key: string = "";
   private value: string = "";
   private date: Date = new Date();
@@ -120,5 +120,6 @@ export class Cookey {
     return cookieString;
   }
 
-  //end class
+  //end classd
 }
+export default Cookey;
