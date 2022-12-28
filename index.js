@@ -1,3 +1,3 @@
-import Cookey from '"./dist/Cookey.js"';
+import Cookey from "./dist/Cookey.js";
 
 export default Cookey;
