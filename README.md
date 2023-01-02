@@ -2,6 +2,16 @@
 
 `npm i cookey`
 
+```html
+<html>
+  <script src="your.js" type="module"></script>
+</html>
+```
+
+```javascript
+import Cookey from "./node_modules/cookey/index.js";
+```
+
 ## Set Cookie
 
 ```javascript

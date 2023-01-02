@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/wminaung/Cookey#readme",
   "dependencies": {
-    "cookey": "^1.0.4"
+    "cookey": "^1.0.5"
   }
 }
