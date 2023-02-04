@@ -49,12 +49,12 @@ class Cookey {
   }
 
   static get getCookie(): CookieObj[] | Error {
-    if (document.cookie === "") return new Error("There is no Cookie");
+    if (document.cookie === "") throw new Error("There is no Cookie");
     let data: string[] = document.cookie.split("; ");
     if (data.length <= 0) {
-      return new Error("There is no Cookie");
+      throw new Error("There is no Cookie");
     }
-    if (data === undefined) return new Error("undifined Cookie");
+    if (data === undefined) throw new Error("undifined Cookie");
 
     const cookieAry: CookieObj[] = data.map((d) => {
       const [key, value] = d.split("=");
@@ -66,18 +66,18 @@ class Cookey {
 
   static hasCookieKey(key: string): boolean | Error {
     if (!Array.isArray(Cookey.getCookieKeys))
-      return new Error("Cookey.getCookieKeys must be Array");
+      throw new Error("Cookey.getCookieKeys must be Array");
 
     return Cookey.getCookieKeys.includes(key);
   }
 
   static getCookieValue(key: string): string | Error {
     if (!Array.isArray(Cookey.getCookie)) {
-      return new Error("Cookey.getCookie must be Array");
+      throw new Error("Cookey.getCookie must be Array");
     }
     const cookieAry = Cookey.getCookie;
     if (cookieAry.length <= 0) {
-      return new Error("There is no Cookie");
+      throw new Error("There is no Cookie");
     }
     return cookieAry.filter((cookieObj: CookieObj) => cookieObj.key == key)[0]
       ?.value;
@@ -86,9 +86,9 @@ class Cookey {
   static get getCookieKeys(): string[] | Error {
     let cookieAry: CookieObj[] | Error = Cookey.getCookie;
     if (!Array.isArray(cookieAry)) {
-      return new Error("cookieAry must be Array");
+      throw new Error("cookieAry must be Array");
     }
-    if (cookieAry.length <= 0) return new Error("There is no Cookie");
+    if (cookieAry.length <= 0) throw new Error("There is no Cookie");
     return cookieAry.map((cookieObj) => cookieObj.key);
   }
 

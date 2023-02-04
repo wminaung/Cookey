@@ -25,13 +25,13 @@ class Cookey {
     }
     static get getCookie() {
         if (document.cookie === "")
-            return new Error("There is no Cookie");
+            throw new Error("There is no Cookie");
         let data = document.cookie.split("; ");
         if (data.length <= 0) {
-            return new Error("There is no Cookie");
+            throw new Error("There is no Cookie");
         }
         if (data === undefined)
-            return new Error("undifined Cookie");
+            throw new Error("undifined Cookie");
         const cookieAry = data.map((d) => {
             const [key, value] = d.split("=");
             return { key, value };
@@ -40,27 +40,27 @@ class Cookey {
     }
     static hasCookieKey(key) {
         if (!Array.isArray(Cookey.getCookieKeys))
-            return new Error("Cookey.getCookieKeys must be Array");
+            throw new Error("Cookey.getCookieKeys must be Array");
         return Cookey.getCookieKeys.includes(key);
     }
     static getCookieValue(key) {
         var _a;
         if (!Array.isArray(Cookey.getCookie)) {
-            return new Error("Cookey.getCookie must be Array");
+            throw new Error("Cookey.getCookie must be Array");
         }
         const cookieAry = Cookey.getCookie;
         if (cookieAry.length <= 0) {
-            return new Error("There is no Cookie");
+            throw new Error("There is no Cookie");
         }
         return (_a = cookieAry.filter((cookieObj) => cookieObj.key == key)[0]) === null || _a === void 0 ? void 0 : _a.value;
     }
     static get getCookieKeys() {
         let cookieAry = Cookey.getCookie;
         if (!Array.isArray(cookieAry)) {
-            return new Error("cookieAry must be Array");
+            throw new Error("cookieAry must be Array");
         }
         if (cookieAry.length <= 0)
-            return new Error("There is no Cookie");
+            throw new Error("There is no Cookie");
         return cookieAry.map((cookieObj) => cookieObj.key);
     }
     static deleteCookie(key, path = "/") {
